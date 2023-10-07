@@ -33,3 +33,13 @@ func (l *List) Clear() {
 func (l *List) Extend(another_list List) {
 	l.Items = append(l.Items, another_list.Items...)
 }
+
+func (l *List) Count(element interface{}) int {
+	occurance := 0
+	for _, i := range l.Items {
+		if i == element {
+			occurance += 1
+		}
+	}
+	return occurance
+}
