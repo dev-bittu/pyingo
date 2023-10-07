@@ -66,3 +66,13 @@ func (l *List) Index(element interface{}, start, end int) int {
 	}
 	return index
 }
+
+func (l *List) Remove(element interface{}) {
+	var mylist []interface{}
+	for _, i := range l.Items {
+		if i != element {
+			mylist = append(mylist, i)
+		}
+	}
+	l.Items = mylist
+}
