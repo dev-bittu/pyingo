@@ -43,3 +43,7 @@ func (l *List) Count(element interface{}) int {
 	}
 	return occurance
 }
+
+func (l *List) Len() int {
+	return len(l.Items)
+}
