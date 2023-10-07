@@ -1,5 +1,5 @@
 package pyingo
 
-type printer interface {
+type stringer interface {
   String() string
 }
