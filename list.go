@@ -47,3 +47,22 @@ func (l *List) Count(element interface{}) int {
 func (l *List) Len() int {
 	return len(l.Items)
 }
+
+func (l *List) Index(element interface{}, start, end int) int {
+	var index int
+	if start == 0 && end == 0 {
+		for i, j := range l.Items {
+			if j == element {
+				index = i
+			}
+		}
+	} else {
+		mylist := l.Items[start:end]
+		for i, j := range mylist {
+			if j == element {
+				index = i
+			}
+		}
+	}
+	return index
+}
