@@ -7,7 +7,7 @@ type List struct {
 func (l *List) String() string {
 	repr := ""
 	for _, i := range l.Items {
-		repr += i.(string)
+		repr += i.(string)+" "
 	}
 	return "[" + repr + "]"
 }
